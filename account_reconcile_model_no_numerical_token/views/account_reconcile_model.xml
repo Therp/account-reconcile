@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record
+        id="account_reconcile_model_form_inherit_no_numerical_tokens"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >account.reconcile.model.form.inherit.no.numerical.tokens</field>
+        <field name="model">account.reconcile.model</field>
+        <field name="inherit_id" ref="account.view_account_reconcile_model_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='past_months_limit']" position="before">
+                <field name="no_numerical_tokens" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
